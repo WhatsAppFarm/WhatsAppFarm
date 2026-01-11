@@ -51,6 +51,8 @@
                     <RadzenButton Text="Login" Click="@(() => NavigationManager.NavigateTo("login"))" Style="margin-right: 16px;" Visible="@(!Security.IsAuthenticated())" />
                     <RadzenProfileMenu Visible="@Security.IsAuthenticated()" Click="@ProfileMenuClick">
                         <ChildContent>
+                            <RadzenProfileMenuItem Path="administration" Icon="shield" Text="Administration" />
+                            <RadzenProfileMenuItem Icon="store" Text="Reseller" />
                             <RadzenProfileMenuItem Path="profile" Icon="settings" Text="Profile" />
                             <RadzenProfileMenuItem Path="application-users" Icon="person" Text="Users" />
                             <RadzenProfileMenuItem Path="application-roles" Icon="security" Text="Roles" />

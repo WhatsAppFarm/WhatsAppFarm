@@ -2,43 +2,81 @@
 @page "/"
 <PageTitle>WhatsApp Farm</PageTitle>
 
-<div class="rz-border-radius-4" style="min-height: 80vh; display: flex; align-items: center; background: linear-gradient(135deg, #25D366 0%, #128C7E 50%, #075E54 100%); margin: -1rem; padding: 4rem 2rem;">
+<div class="rz-border-radius-4" style="min-height: 85vh; display: flex; align-items: center; background: linear-gradient(135deg, #25D366 0%, #128C7E 50%, #075E54 100%); margin: -1rem; padding: 4rem 2rem;">
     <RadzenRow Gap="2rem" Style="max-width: 1200px; margin: 0 auto; width: 100%;">
         <RadzenColumn Size="12" SizeMD="6" Style="display: flex; flex-direction: column; justify-content: center;">
-            <RadzenText Text="WhatsApp Farm" TextStyle="Radzen.Blazor.TextStyle.DisplayH1" TagName="Radzen.Blazor.TagName.H1" Style="color: white; font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem;"></RadzenText>
-            <RadzenText Text="Manage Your WhatsApp Communications at Scale" TextStyle="Radzen.Blazor.TextStyle.H4" TagName="Radzen.Blazor.TagName.H2" Style="color: rgba(255,255,255,0.9); font-weight: 400; margin-bottom: 1.5rem;"></RadzenText>
-            <RadzenText Text="Streamline your messaging workflow with powerful automation tools, analytics, and multi-account management — all in one place." TextStyle="Radzen.Blazor.TextStyle.Body1" TagName="Radzen.Blazor.TagName.P" Style="color: rgba(255,255,255,0.85); font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;"></RadzenText>
-            <RadzenStack Orientation="Radzen.Orientation.Horizontal" Gap="1rem" Wrap="Radzen.FlexWrap.Wrap">
-                <RadzenButton Text="Get Started" Icon="arrow_forward" ButtonStyle="Radzen.ButtonStyle.Primary" Size="Radzen.ButtonSize.Large"></RadzenButton>
-                <RadzenButton Text="Learn More" Icon="info" ButtonStyle="Radzen.ButtonStyle.Light" Size="Radzen.ButtonSize.Large" Variant="Radzen.Variant.Outlined"></RadzenButton>
+            <RadzenBadge Text="🚀 Version 2.0 Released" BadgeStyle="BadgeStyle.Light" Shade="Shade.Lighter" Style="width: fit-content; margin-bottom: 1.5rem; padding: 0.5rem 1rem; font-size: 0.9rem;" />
+            <RadzenText TextStyle="TextStyle.DisplayH1" TagName="TagName.H1" Style="color: white; font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.1;">
+                WhatsApp Farm
+            </RadzenText>
+            <RadzenText TextStyle="TextStyle.H4" TagName="TagName.H2" Style="color: rgba(255,255,255,0.95); font-weight: 500; margin-bottom: 1.5rem; line-height: 1.4;">
+                Manage Your WhatsApp Communications at Scale
+            </RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" Style="color: rgba(255,255,255,0.85); font-size: 1.2rem; line-height: 1.8; margin-bottom: 2.5rem;">
+                Streamline your messaging workflow with powerful automation tools, analytics, and multi-account management — all in one place.
+            </RadzenText>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem" Wrap="FlexWrap.Wrap" AlignItems="AlignItems.Center">
+                <RadzenButton Text="Get Started" Icon="rocket_launch" ButtonStyle="ButtonStyle.Light" Size="ButtonSize.Large" Style="padding: 0.875rem 2rem; font-weight: 600; font-size: 1rem;" />
+                <RadzenButton Text="Watch Demo" Icon="play_circle" ButtonStyle="ButtonStyle.Secondary" Variant="Variant.Text" Size="ButtonSize.Large" Style="padding: 0.875rem 1.5rem; font-weight: 500; font-size: 1rem; color: white;" />
+            </RadzenStack>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="2rem" Style="margin-top: 2.5rem;" Wrap="FlexWrap.Wrap">
+                <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
+                    <RadzenIcon Icon="check_circle" Style="color: rgba(255,255,255,0.9); font-size: 1.25rem;" />
+                    <RadzenText TextStyle="TextStyle.Body2" Style="color: rgba(255,255,255,0.9); margin: 0;">Free 14-day trial</RadzenText>
+                </RadzenStack>
+                <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
+                    <RadzenIcon Icon="check_circle" Style="color: rgba(255,255,255,0.9); font-size: 1.25rem;" />
+                    <RadzenText TextStyle="TextStyle.Body2" Style="color: rgba(255,255,255,0.9); margin: 0;">No credit card required</RadzenText>
+                </RadzenStack>
             </RadzenStack>
         </RadzenColumn>
         <RadzenColumn Size="12" SizeMD="6" Style="display: flex; align-items: center; justify-content: center;">
-            <RadzenCard Style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); padding: 2rem; border-radius: 1rem;">
-                <RadzenStack Gap="1.5rem">
-                    <RadzenStack Orientation="Radzen.Orientation.Horizontal" Gap="1rem" AlignItems="Radzen.AlignItems.Center">
-                        <RadzenIcon Icon="chat" Style="font-size: 2.5rem; color: white;"></RadzenIcon>
-                        <div>
-                            <RadzenText Text="Multi-Account Support" TextStyle="Radzen.Blazor.TextStyle.H6" Style="color: white; margin: 0;"></RadzenText>
-                            <RadzenText Text="Manage multiple WhatsApp accounts effortlessly" TextStyle="Radzen.Blazor.TextStyle.Body2" Style="color: rgba(255,255,255,0.8); margin: 0;"></RadzenText>
+            <RadzenStack Gap="1rem" Style="width: 100%; max-width: 400px;">
+                <RadzenCard Variant="Variant.Filled" Style="background: rgba(255,255,255,0.12); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.18); padding: 1.5rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;" class="hero-feature-card">
+                    <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem" AlignItems="AlignItems.Center">
+                        <div style="background: rgba(255,255,255,0.2); border-radius: 0.75rem; padding: 0.75rem; display: flex; align-items: center; justify-content: center;">
+                            <RadzenIcon Icon="forum" Style="font-size: 1.75rem; color: white;" />
                         </div>
+                        <RadzenStack Gap="0.25rem">
+                            <RadzenText TextStyle="TextStyle.H6" Style="color: white; margin: 0; font-weight: 600;">Multi-Account Support</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body2" Style="color: rgba(255,255,255,0.8); margin: 0;">Manage unlimited WhatsApp accounts from one dashboard</RadzenText>
+                        </RadzenStack>
                     </RadzenStack>
-                    <RadzenStack Orientation="Radzen.Orientation.Horizontal" Gap="1rem" AlignItems="Radzen.AlignItems.Center">
-                        <RadzenIcon Icon="schedule" Style="font-size: 2.5rem; color: white;"></RadzenIcon>
-                        <div>
-                            <RadzenText Text="Automated Messaging" TextStyle="Radzen.Blazor.TextStyle.H6" Style="color: white; margin: 0;"></RadzenText>
-                            <RadzenText Text="Schedule and automate your communications" TextStyle="Radzen.Blazor.TextStyle.Body2" Style="color: rgba(255,255,255,0.8); margin: 0;"></RadzenText>
+                </RadzenCard>
+                <RadzenCard Variant="Variant.Filled" Style="background: rgba(255,255,255,0.12); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.18); padding: 1.5rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;" class="hero-feature-card">
+                    <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem" AlignItems="AlignItems.Center">
+                        <div style="background: rgba(255,255,255,0.2); border-radius: 0.75rem; padding: 0.75rem; display: flex; align-items: center; justify-content: center;">
+                            <RadzenIcon Icon="smart_toy" Style="font-size: 1.75rem; color: white;" />
                         </div>
+                        <RadzenStack Gap="0.25rem">
+                            <RadzenText TextStyle="TextStyle.H6" Style="color: white; margin: 0; font-weight: 600;">Smart Automation</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body2" Style="color: rgba(255,255,255,0.8); margin: 0;">Schedule messages and automate your workflows</RadzenText>
+                        </RadzenStack>
                     </RadzenStack>
-                    <RadzenStack Orientation="Radzen.Orientation.Horizontal" Gap="1rem" AlignItems="Radzen.AlignItems.Center">
-                        <RadzenIcon Icon="analytics" Style="font-size: 2.5rem; color: white;"></RadzenIcon>
-                        <div>
-                            <RadzenText Text="Detailed Analytics" TextStyle="Radzen.Blazor.TextStyle.H6" Style="color: white; margin: 0;"></RadzenText>
-                            <RadzenText Text="Track performance with real-time insights" TextStyle="Radzen.Blazor.TextStyle.Body2" Style="color: rgba(255,255,255,0.8); margin: 0;"></RadzenText>
+                </RadzenCard>
+                <RadzenCard Variant="Variant.Filled" Style="background: rgba(255,255,255,0.12); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.18); padding: 1.5rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;" class="hero-feature-card">
+                    <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem" AlignItems="AlignItems.Center">
+                        <div style="background: rgba(255,255,255,0.2); border-radius: 0.75rem; padding: 0.75rem; display: flex; align-items: center; justify-content: center;">
+                            <RadzenIcon Icon="insights" Style="font-size: 1.75rem; color: white;" />
                         </div>
+                        <RadzenStack Gap="0.25rem">
+                            <RadzenText TextStyle="TextStyle.H6" Style="color: white; margin: 0; font-weight: 600;">Real-time Analytics</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body2" Style="color: rgba(255,255,255,0.8); margin: 0;">Track delivery, engagement, and response metrics</RadzenText>
+                        </RadzenStack>
                     </RadzenStack>
-                </RadzenStack>
-            </RadzenCard>
+                </RadzenCard>
+                <RadzenCard Variant="Variant.Filled" Style="background: rgba(255,255,255,0.12); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.18); padding: 1.5rem; border-radius: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;" class="hero-feature-card">
+                    <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem" AlignItems="AlignItems.Center">
+                        <div style="background: rgba(255,255,255,0.2); border-radius: 0.75rem; padding: 0.75rem; display: flex; align-items: center; justify-content: center;">
+                            <RadzenIcon Icon="security" Style="font-size: 1.75rem; color: white;" />
+                        </div>
+                        <RadzenStack Gap="0.25rem">
+                            <RadzenText TextStyle="TextStyle.H6" Style="color: white; margin: 0; font-weight: 600;">Enterprise Security</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body2" Style="color: rgba(255,255,255,0.8); margin: 0;">End-to-end encryption and compliance ready</RadzenText>
+                        </RadzenStack>
+                    </RadzenStack>
+                </RadzenCard>
+            </RadzenStack>
         </RadzenColumn>
     </RadzenRow>
 </div>

@@ -22,7 +22,8 @@
                     <RadzenAppearanceToggle />
                     <RadzenProfileMenu Visible="@Security.IsAuthenticated()" Click="@ProfileMenuClick">
                         <ChildContent>
-
+                            <RadzenProfileMenuItem Path="administration" Icon="shield" Text="Administration" />
+                            <RadzenProfileMenuItem Icon="store" Text="Reseller" />
                             <RadzenProfileMenuItem Path="profile" Icon="settings" Text="Profile" />
                             <RadzenProfileMenuItem Path="application-users" Icon="person" Text="Users" />
                             <RadzenProfileMenuItem Path="application-roles" Icon="security" Text="Roles" />
@@ -46,10 +47,15 @@
     </RadzenBody>
     <RadzenSidebar @bind-Expanded="@sidebarExpanded">
         <RadzenPanelMenu>
-            <RadzenPanelMenuItem Text="Home" Path="" />
-            <RadzenPanelMenuItem Text="Settings" Path="settings">
-                <RadzenPanelMenuItem Text="General" Path="settings/general" />
-                <RadzenPanelMenuItem Text="Docker" Path="settings/docker" />
+            <RadzenPanelMenuItem Icon="dashboard" Text="Dashboard" Path="administration/dashboard" />
+            <RadzenPanelMenuItem Icon="security" Text="Access" >
+                <RadzenPanelMenuItem Text="Users" Path="administration/access/users" />
+                <RadzenPanelMenuItem Text="Roles" Path="administration/access/roles" />
+                <RadzenPanelMenuItem Text="Permissions" />
+            </RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Icon="settings" Text="Settings" Path="administration/settings">
+                <RadzenPanelMenuItem Text="General" Path="administration/settings/general" />
+                <RadzenPanelMenuItem Text="Docker" Path="administration/settings/docker" />
             </RadzenPanelMenuItem>
         </RadzenPanelMenu>
         <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6" Style="padding: var(--rz-panel-menu-item-padding);">
