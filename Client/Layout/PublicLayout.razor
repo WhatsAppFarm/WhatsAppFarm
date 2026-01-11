@@ -1,0 +1,75 @@
+@inherits LayoutComponentBase
+<RadzenDialog />
+<RadzenNotification />
+<RadzenTooltip />
+<RadzenContextMenu />
+<RadzenLayout>
+    <RadzenHeader>
+        <RadzenRow
+            JustifyContent="JustifyContent.Start"
+            AlignItems="AlignItems.Center"
+            Gap="0"
+            Class="rz-px-4"
+            Style="height: 100%;">
+            <RadzenColumn Size="6">
+                <RadzenStack
+                    AlignItems="AlignItems.Center"
+                    Orientation="Orientation.Horizontal"
+                    Gap="1rem">
+                    <RadzenStack
+                        AlignItems="Radzen.AlignItems.Center"
+                        Orientation="Radzen.Orientation.Horizontal"
+                        JustifyContent="Radzen.JustifyContent.Center"
+                        Gap="0.5rem">
+                        <RadzenImage
+                            Path="images/whatsapp.png"
+                            style="width: 24px; height: 24px"
+                            AlternateText="Application logo"></RadzenImage>
+                        <RadzenStack
+                            AlignItems="Radzen.AlignItems.Center"
+                            Orientation="Radzen.Orientation.Horizontal"
+                            JustifyContent="Radzen.JustifyContent.Center"
+                            Gap="0.25rem">
+                            <RadzenText
+                                Text="WhatsApp"
+                                class="rz-mb-0"
+                                style="color: var(--rz-sidebar-color); font-weight: bold; font-size: 18px" />
+                            <RadzenText
+                                Text="Farm"
+                                class="rz-mb-0"
+                                style="color: var(--rz-sidebar-color); font-size: 18px" />
+                        </RadzenStack>
+                    </RadzenStack>
+                    <RadzenMenu>
+                        <RadzenMenuItem Text="Home" Path="" />
+                    </RadzenMenu>
+                </RadzenStack>
+            </RadzenColumn>
+            <RadzenColumn Size="6">
+                <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem" class="rz-px-2">
+                    <RadzenAppearanceToggle />
+                    <RadzenButton Text="Login" Click="@(() => NavigationManager.NavigateTo("login"))" Style="margin-right: 16px;" Visible="!@Security.IsAuthenticated()" />
+                    <RadzenProfileMenu Visible="@Security.IsAuthenticated()" Click="@ProfileMenuClick">
+                        <ChildContent>
+                            <RadzenProfileMenuItem Path="profile" Icon="settings" Text="Profile" />
+                            <RadzenProfileMenuItem Path="application-users" Icon="person" Text="Users" />
+                            <RadzenProfileMenuItem Path="application-roles" Icon="security" Text="Roles" />
+                            <RadzenProfileMenuItem Text="Logout" Value="Logout" Icon="power_settings_new" />
+                        </ChildContent>
+                        <Template>
+                            @Security.User?.Name
+                            <RadzenGravatar Email="@Security.User?.Name" />
+                        </Template>
+                    </RadzenProfileMenu>
+                </RadzenStack>
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenHeader>
+    <RadzenBody class="rz-m-0 rz-border-radius-0">
+        <RadzenRow Class="rz-mx-auto rz-px-4 rz-pt-2 rz-pt-md-4 rz-pt-lg-6 rz-pt-xl-12 rz-pb-2 rz-pb-lg-12" Style="max-width: 1440px;">
+            <RadzenColumn Size="12">
+            @Body
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenBody>
+</RadzenLayout>
