@@ -48,7 +48,7 @@
             <RadzenColumn Size="6">
                 <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem" class="rz-px-2">
                     <RadzenAppearanceToggle />
-                    <RadzenButton Text="Login" Click="@(() => NavigationManager.NavigateTo("login"))" Style="margin-right: 16px;" Visible="!@Security.IsAuthenticated()" />
+                    <RadzenButton Text="Login" Click="@(() => NavigationManager.NavigateTo("login"))" Style="margin-right: 16px;" Visible="@(!Security.IsAuthenticated())" />
                     <RadzenProfileMenu Visible="@Security.IsAuthenticated()" Click="@ProfileMenuClick">
                         <ChildContent>
                             <RadzenProfileMenuItem Path="profile" Icon="settings" Text="Profile" />
